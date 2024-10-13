@@ -1,0 +1,77 @@
+{
+	"geode": "3.4.0",
+	"gd": {
+		"win": "2.206"
+	},
+	"version": "v1.0.0",
+	"id": "thesillydoggo.sillybot",
+	"name": "Silly Bot",
+	"developer": "TheSillyDoggo",
+	"description": "replay bot",
+	"tags": [
+		"gameplay",
+		"utility"
+	],
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		]
+	},
+	"dependencies": [
+		{
+			"id": "thesillydoggo.qolmod",
+			"importance": "required",
+			"version": ">=1.4.4-beta.1"
+		},
+		{
+            "id": "geode.node-ids",
+            "version": "v1.13.0",
+            "importance": "required"
+        }
+	],
+	"incompatibilities": [
+		{
+			"id": "syzzi.click_between_frames",
+			"version": "*",
+			"importance": "breaking"
+		}
+	],
+	"settings": {
+		"frames": {
+			"type": "bool",
+			"name": "Use Frames (NOT RECOMMENDED !!!)",
+			"default": false,
+			"description": "Use Frames instead of Deltatime for updating the macro"
+		},
+		"click-fixes": {
+			"type": "bool",
+			"name": "Click Fixes",
+			"default": true,
+			"description": "Adjusts the position of the player whenever you click to fix macros"
+		},
+		"keybinds": {
+			"type": "bool",
+			"name": "Keybinds",
+			"default": true,
+			"description": "Press a key on your keyboard to change the macro state, check popup for more info"
+		},
+		"threaded-loading": {
+			"type": "bool",
+			"name": "Multithreaded Macro Loading",
+			"default": true,
+			"description": "Loads each macro on a seperate CPU thread"
+		},
+		"info-additions": {
+			"type": "bool",
+			"name": "Additional Info Label Info",
+			"default": true,
+			"description": "Shows extra information about the bot in the GD info label"
+		},
+		"info-replace": {
+			"type": "bool",
+			"name": "Info Label Replace",
+			"default": false,
+			"description": "Replaces the info label text instead of adding"
+		}
+	}
+}
